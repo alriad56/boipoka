@@ -1,9 +1,9 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
 import Books from "../Books/Books";
-import { useRouteLoaderData } from 'react-router-dom';
+import { useLoaderData } from "react-router-dom";
 const Home = () => {
-    const data = useRouteLoaderData();
+    const data = useLoaderData();
     console.log(data)
     return (
         <div>
