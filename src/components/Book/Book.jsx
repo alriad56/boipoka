@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Book = ({singleBook}) => {
     // console.log(singleBook)
-    const {bookName,author,image} = singleBook;
+    const {bookName,author,bookId,image} = singleBook;
     return (
+        <Link to={`/bookDetails/${bookId}`}>
         <div className="card bg-base-100 w-96 shadow-sm flex ">
-        <figure className='p-3'>
-          <img
+        <figure className='p-3 bg-gray-100 w-2/3  mx-auto'>
+          <img className='h-[166px]'
             src={image}
             alt="Shoes" />
         </figure>
@@ -18,6 +20,7 @@ const Book = ({singleBook}) => {
           </div>
         </div>
       </div>
+        </Link>
     );
 };
 
