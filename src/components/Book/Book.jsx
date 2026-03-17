@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Book = ({singleBook}) => {
     // console.log(singleBook)
-    const {bookName,author,bookId,image} = singleBook;
+    const {bookName,author,bookId,image} = singleBook || {};
     return (
         <Link to={`/bookDetails/${bookId}`}>
         <div className="card bg-base-100 w-96 shadow-sm flex ">
